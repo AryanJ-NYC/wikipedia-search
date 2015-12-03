@@ -1,0 +1,1 @@
+A web app built using AngularJS and Bootstrap. The web app solves the [Wikipedia Viewer](http://www.freecodecamp.com/challenges/zipline-build-a-wikipedia-viewer) zipline presented at [FreeCodeCamp](http://www.freecodecamp.com/).
