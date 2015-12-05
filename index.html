@@ -2,11 +2,13 @@
 <html>
 <head>
 	<title>Wikipedia Search</title>
-	<link type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-	<link type="text/css" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+	<link type="text/css" rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link type="text/css" rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
 </head>
 <body ng-app="wikiSearchApp">
-
+  <div class="input-group form-inline">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span><input type="text" class="form-control" ng-model="searchText" placeholder="Search...">
+  </div>
 <script src="node_modules/angular/angular.min.js"></script>
 </body>
 </html>
