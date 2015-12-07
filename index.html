@@ -8,11 +8,10 @@
 <body ng-app="wikiSearchApp" ng-controller="wikiController">
   <div class="input-group form-inline">
     <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
-    <input type="text" class="form-control" ng-model="searchValue" placeholder="Search...">
+    <input type="text" class="form-control" ng-model="searchValue" ng-keyup="onTypeEvent()" placeholder="Search...">
 
   </div>
   {{ searchResults }}
-  {{ searchValue }}
 <script src="node_modules/angular/angular.min.js"></script>
 <script src="app/app.js"></script>
 </body>
