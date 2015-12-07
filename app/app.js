@@ -1,4 +1,4 @@
-app = angular.module('wikiSearchApp', []);
+app = angular.module('wikiSearchApp', ['ngSanitize']);
 
 app.controller('wikiController', ['$scope', '$http', function($scope, $http) {
     var apiBaseUrl = 'https://en.wikipedia.org/w/api.php';
@@ -14,7 +14,7 @@ app.controller('wikiController', ['$scope', '$http', function($scope, $http) {
                 }
             })
             .then(function (response) {
-                $scope.searchResults = response.data;
+                $scope.searchResults = response.data.query.search;
             });
     }
 }]);
