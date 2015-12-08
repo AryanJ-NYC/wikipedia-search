@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Wikipedia Search</title>
 	<link type="text/css" rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 	<link type="text/css" rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
   <link type="text/css" rel="stylesheet" href="css/custom.css">
 </head>
 <body ng-app="wikiSearchApp" ng-controller="wikiController">
+  <!--Search Bar-->
   <div class="input-group form-inline">
     <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
     <input type="text" class="form-control" ng-model="searchValue" ng-keyup="onTypeEvent()" placeholder="Search...">
   </div>
+
+  <!--Search Results-->
   <div class="container-fluid">
     <a ng-repeat="result in searchResults" ng-href="http://en.wikipedia.org/wiki/{{ result.title }}" target="_blank">
       <div class="col-xs-12 thumbnail">
