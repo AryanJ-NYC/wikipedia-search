@@ -2,12 +2,12 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Wikipedia Search</title>
-	<link type="text/css" rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-	<link type="text/css" rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+  <title>Wikipedia Search</title>
+  <link type="text/css" rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link type="text/css" rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
   <link type="text/css" rel="stylesheet" href="css/custom.css">
 </head>
-<body ng-app="wikiSearchApp" ng-controller="wikiController">
+<body ng-app="wikiSearchApp" ng-controller="wikiController" class="container-fluid">
   <!--Search Bar-->
   <div class="input-group form-inline">
     <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
@@ -15,14 +15,14 @@
   </div>
 
   <!--Search Results-->
-  <div class="container-fluid">
+  <div>
     <a ng-repeat="result in searchResults" ng-href="http://en.wikipedia.org/wiki/{{ result.title }}" target="_blank">
       <div class="col-xs-12 thumbnail">
         <h1>{{ result.title }}</h1>
         <p ng-bind-html="result.snippet"></p>
       </div>
     </a>
-    <a ng-href="{{ randomLink }}" target="_blank" aria-label="Random Wikipedia Link" ng-click="">Random Wikipedia article</a>
+    <a ng-href="{{ randomLink }}" class="btn btn-primary" target="_blank" aria-label="Random Wikipedia Link">Random Wikipedia article</a>
   </div>
 <script src="node_modules/angular/angular.min.js"></script>
 <script src="node_modules/angular-sanitize/angular-sanitize.min.js"></script>
